@@ -1,4 +1,3 @@
-// create variables for connecting html file
 var hour9 = document.getElementById('hour-9').children[1].text;
 console.log(hour9)
 var btn1 = document.getElementById('btn1')
@@ -17,37 +16,28 @@ var future = document.querySelector('.future')
 var saveBtn = document.querySelectorAll('.saveBtn');
 var currentHour = moment().format('h');
 console.log(currentHour)
-
+// jquery
+var saveBtns = $('.saveBtn')
 // function to save text in box to local storage 
-// btn1.addEventListener('click', function (event) {
-//     event.preventDefault();
+saveBtns.on('click', function (event) {
+    var taskText = $(this).siblings('.description').val();
+    console.log(taskText)
+    var parentID = $(this).parent().attr('id');
+    localStorage.setItem(parentID, taskText);
 
-//     var taskText = txt1.value;
+    storeTasks();
+    renderTasks();
+});
 
-//     if (taskText === "") {
-//         return;
-//     }
 
-//     storeTasks();
-//     renderTasks();
-// });
-
-// // // store tasks in localstorage
-// function storeTasks() {
-//     localStorage.setItem("txt1", txt1);
-// }
-
-// function renderTasks() {
-//     txt1.txtContent = localStorage.getItem("txt1")
-// }
 
 // ----------- Working for 1 text box saving ----------------------------
-if (window.localStorage["taskText"]) {
-    txt1.value = window.localStorage["taskText"];
-}
-txt1.addEventListener("keyup", function () {
-    window.localStorage["taskText"] = txt1.value;
-});
+// if (window.localStorage["taskText"]) {
+//     txt1.value = window.localStorage["taskText"];
+// }
+// txt1.addEventListener("keyup", function () {
+//     window.localStorage["taskText"] = txt1.value;
+// });
 
 
 // ----------------------------------------------------------------------
@@ -58,9 +48,11 @@ function displayTime() {
     var currentDay = document.getElementById('currentDay');
     currentDay.textContent = headCurrentTime;
 };
+
+setInterval(displayTime, 1000)
 displayTime();
 
-// page color change function
+// ######### page color change function ##########
 
 // function colorChange() {
 //     // if statement matching 
@@ -69,3 +61,22 @@ displayTime();
 // colorChange();
 
 
+// ############################################
+// Steve Idea
+// function renderSchedule() {
+//     var storageKey = hour10.attributes('id');
+//     var value = localStorage.getItem(storageKey)
+//     hour10.fine(".description").val(value);
+// }
+
+// // // store tasks in localstorage
+// function storeTasks(taskText) {
+//     localStorage.setItem("txt1", taskText);
+//     alert(taskText)
+// }
+
+// function renderTasks() {
+//     txt1.txtContent = localStorage.getItem("txt1")
+//     alert('renderTasks')
+// }
+// ###################################################
