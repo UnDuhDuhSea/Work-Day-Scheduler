@@ -2,7 +2,7 @@
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-![WorkDayScheduler](assets\imgs\WorkDaySchedule.jpg "ScheduleApp")
+https://unduhduhsea.github.io/Work-Day-Scheduler/
 
 ## About The Project
 
@@ -15,6 +15,8 @@ This project is a calendar app that allows you to save your tasks in the text ar
     -JavaScript
     -jQuery
     -Bootstrap
+
+![WorkDayScheduler](assets\imgs\WorkDaySchedule.jpg "ScheduleApp")
 
 ## Contact
 
