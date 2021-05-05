@@ -16,7 +16,7 @@ This project is a calendar app that allows you to save your tasks in the text ar
     -jQuery
     -Bootstrap
 
-![WorkDayScheduler](assets\imgs\WorkDaySchedule.jpg "ScheduleApp")
+![WorkDayScheduler](assets/imgs/WorkDaySchedule.jpg "ScheduleApp")
 
 ## Contact
 
